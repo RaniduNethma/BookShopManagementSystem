@@ -55,7 +55,7 @@ public class BookController {
 			
 			//SQL Query
 			String sql = "SELECT * FROM book WHERE id '"+convertedID+"'";
-			rs = stmt.executeUpdate(sql);
+			rs = stmt.executeQuery(sql);
 			
 			while(rs.next()) {
 				int id = rs.getInt(1);
