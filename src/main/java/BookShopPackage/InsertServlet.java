@@ -26,7 +26,7 @@ public class InsertServlet extends HttpServlet {
 		
 		if(isTrue == true) {
 			String alertMessage = "Data Insert Successful";
-			response.getWriter().println("<script> alert('"+alertMessage+"'); window.location.href='done.jsp'</script>");
+			response.getWriter().println("<script> alert('"+alertMessage+"'); window.location.href='GetAllServlet'</script>");
 		}
 		else {
 			RequestDispatcher dis2 = request.getRequestDispatcher("wrong.jsp");

@@ -15,5 +15,15 @@
      	<servlet-name>InsertServlet</servlet-name>
      	<url-pattern>/InsertServlet</url-pattern>
      </servlet-mapping>
+     
+     <servlet>
+     	<servlet-name>GetAllServlet</servlet-name>
+     	<servlet-class>BookShopPackage.GetAllServlet</servlet-class>
+     </servlet>
+     
+     <servlet-mapping>
+     	<servlet-name>GetAllServlet</servlet-name>
+     	<url-pattern>/GetAllServlet</url-pattern>
+     </servlet-mapping>
 
 </web-app>
