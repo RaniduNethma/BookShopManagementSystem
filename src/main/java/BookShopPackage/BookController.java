@@ -74,4 +74,36 @@ public class BookController {
 		}
 		return book;
 	}
+	
+	//Get All Data
+	public static List<BookModel> GetAllBook(){
+		
+		ArrayList <BookModel> books = new ArrayList<>();
+		
+		try {
+			//Database Connection Call
+			con = DBConnection.getConnection();
+			stmt = con.createStatement();
+			
+			//SQL Query
+			String sql = "SELECT * FROM book";
+			rs = stmt.executeQuery(sql);
+			
+			while(rs.next()) {
+				int id = rs.getInt(1);
+				String name = rs.getString(2);
+				String price = rs.getString(3);
+				String catagory = rs.getString(4);
+				String quantity = rs.getString(5);
+				String description = rs.getString(6);
+				
+				BookModel bk = new BookModel(id, name, price, catagory, quantity, description);
+				books.add(bk);
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return books;
+	}
 }
