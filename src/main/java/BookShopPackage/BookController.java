@@ -42,9 +42,9 @@ public class BookController {
 	}
 	
 	//View Data (GetById)
-	public static List<BookModel> getById (String Id){
+	public static List<BookModel> getById (String ID){
 		
-		int convertedID = Integer.parseInt(Id);
+		int convertedID = Integer.parseInt(ID);
 		
 		ArrayList <BookModel> book = new ArrayList<>();
 		
