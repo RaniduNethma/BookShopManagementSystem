@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" 
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -18,14 +19,14 @@
 			<th>Description</th>
 		</tr>
 		<c:forEach var="books" items="${allBooks}">
-			<tr>
-				<td>${book.id}</td>
-				<td>${book.name}</td>
-				<td>${book.price}</td>
-				<td>${book.catagory}</td>
-				<td>${book.quantity}</td>
-				<td>${book.description}</td>
-			</tr>
+		<tr>
+			<td>${book.id}</td>
+			<td>${book.name}</td>
+			<td>${book.price}</td>
+			<td>${book.catagory}</td>
+			<td>${book.quantity}</td>
+			<td>${book.description}</td>
+		</tr>
 		</c:forEach>
 	</table>
 </body>
