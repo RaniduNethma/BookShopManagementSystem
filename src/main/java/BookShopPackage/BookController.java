@@ -15,7 +15,7 @@ public class BookController {
 	private static ResultSet rs = null;
 	
 	//Insert Data
-	public static boolean insertdata(String name, String price, String catagory, String quantity, String description) {
+	public static boolean insertdata(String name, String price, String category, String quantity, String description) {
 		
 		boolean isSucess = false;
 		
@@ -25,7 +25,7 @@ public class BookController {
 			stmt = con.createStatement();
 			
 			//SQL Query
-			String sql = "INSERT INTO book VALUES(0,'"+name+"','"+price+"','"+catagory+"','"+quantity+"','"+description+"')";
+			String sql = "INSERT INTO book VALUES(0,'"+name+"','"+price+"','"+category+"','"+quantity+"','"+description+"')";
 			int rs = stmt.executeUpdate(sql);
 			
 			if(rs > 0) {
@@ -61,11 +61,11 @@ public class BookController {
 				int id = rs.getInt(1);
 				String name = rs.getString(2);
 				String price = rs.getString(3);
-				String catagory = rs.getString(4);
+				String category = rs.getString(4);
 				String quantity = rs.getString(5);
 				String description = rs.getString(6);
 				
-				BookModel bk = new BookModel(id, name, price, catagory, quantity, description);
+				BookModel bk = new BookModel(id, name, price, category, quantity, description);
 				book.add(bk);
 			}
 		}
@@ -93,11 +93,11 @@ public class BookController {
 				int id = rs.getInt(1);
 				String name = rs.getString(2);
 				String price = rs.getString(3);
-				String catagory = rs.getString(4);
+				String category = rs.getString(4);
 				String quantity = rs.getString(5);
 				String description = rs.getString(6);
 				
-				BookModel bk = new BookModel(id, name, price, catagory, quantity, description);
+				BookModel bk = new BookModel(id, name, price, category, quantity, description);
 				books.add(bk);
 			}
 		}

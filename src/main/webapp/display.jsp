@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,11 +24,16 @@
 			<td>${book.id}</td>
 			<td>${book.name}</td>
 			<td>${book.price}</td>
-			<td>${book.catagory}</td>
+			<td>${book.category}</td>
 			<td>${book.quantity}</td>
 			<td>${book.description}</td>
 		</tr>
 		</c:forEach>
+		<c:if test="${empty allBooks}">
+    		<tr>
+    			<td colspan="6">No books found.</td>
+    		</tr>
+		</c:if>
 	</table>
 </body>
 </html>
