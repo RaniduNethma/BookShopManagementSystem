@@ -16,13 +16,13 @@ public class InsertServlet extends HttpServlet {
 	
 		String name = request.getParameter("name");
 		String price = request.getParameter("price");
-		String catagory = request.getParameter("catagory");
+		String category = request.getParameter("category");
 		String quantity = request.getParameter("quantity");
 		String description = request.getParameter("description");
 		
 		boolean isTrue;
 		
-		isTrue = BookController.insertdata(name, price, catagory, quantity, description);
+		isTrue = BookController.insertdata(name, price, category, quantity, description);
 		
 		if(isTrue == true) {
 			String alertMessage = "Data Insert Successful";
