@@ -19,7 +19,7 @@
 			<th>Quantity</th>
 			<th>Description</th>
 		</tr>
-		<c:forEach var="books" items="${allBooks}">
+		<c:forEach var="book" items="${allBooks}">
 		<tr>
 			<td>${book.id}</td>
 			<td>${book.name}</td>
