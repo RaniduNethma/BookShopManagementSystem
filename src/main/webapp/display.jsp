@@ -18,6 +18,7 @@
 			<th>Category</th>
 			<th>Quantity</th>
 			<th>Description</th>
+			<th>Action</th>
 		</tr>
 		<c:forEach var="book" items="${allBooks}">
 		<tr>
@@ -27,6 +28,11 @@
 			<td>${book.category}</td>
 			<td>${book.quantity}</td>
 			<td>${book.description}</td>
+			<td>
+				<a href="update.jsp?id=${book.id}&name=${book.name}&price=${book.price}&category=${book.category}&quantity${book.quantity}&description=${book.description}">
+					<button>Edit</button>
+				</a>
+			</td>
 		</tr>
 		</c:forEach>
 		<c:if test="${empty allBooks}">
