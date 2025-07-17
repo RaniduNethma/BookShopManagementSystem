@@ -106,4 +106,28 @@ public class BookController {
 		}
 		return books;
 	}
+	
+	//Update Data
+	public static boolean updateData(String id, String name, String price, String category, String quantity, String description) {
+		try {
+			//Database Connection Call
+			con = DBConnection.getConnection();
+			stmt = con.createStatement();
+			
+			//SQL Query
+			String sql = "UPDATE book SET name='"+name+"', price='"+price+"', category='"+category+"', quantity='"+quantity+"', description='"+description+"'"
+					+ "WHERE id='"+id+"'";
+			int rs = stmt.executeUpdate(sql);
+			if(rs > 0) {
+				isSucess = true;
+			}
+			else {
+				isSucess = false;
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return isSucess;
+	}
 }
