@@ -32,6 +32,11 @@
 				<a href="update.jsp?id=${book.id}&name=${book.name}&price=${book.price}&category=${book.category}&quantity=${book.quantity}&description=${book.description}">
 					<button>Edit</button>
 				</a>
+				
+				<form action="DeleteServlet" method="post">
+				<input type="hidden" name="id" value="${book.id}" />
+					<button>Delete</button>
+				</form>
 			</td>
 		</tr>
 		</c:forEach>
