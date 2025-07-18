@@ -108,7 +108,7 @@ public class BookController {
 	}
 	
 	//Update Data
-	public static boolean updateData(String id, String name, String price, String category, String quantity, String description) {
+	public static boolean updateData(String id, String name, String price, String category, String quantity, String description){
 		try {
 			//Database Connection Call
 			con = DBConnection.getConnection();
@@ -118,6 +118,34 @@ public class BookController {
 			String sql = "UPDATE book SET name='"+name+"', price='"+price+"', category='"+category+"', quantity='"+quantity+"', description='"+description+"'"
 					+ "WHERE id='"+id+"'";
 			int rs = stmt.executeUpdate(sql);
+			
+			if(rs > 0) {
+				isSucess = true;
+			}
+			else {
+				isSucess = false;
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+		return isSucess;
+	}
+	
+	//Delete Data
+	public static boolean deleteData(String id){
+		
+		int idForDelete = Integer.parseInt(id);
+		
+		try {
+			//Database Connection Call
+			con = DBConnection.getConnection();
+			stmt = con.createStatement();
+			
+			//SQL Query
+			String sql = "DELETE FROM book WHERE id='"+idForDelete+"'";
+			int rs = stmt.executeUpdate(sql);
+			
 			if(rs > 0) {
 				isSucess = true;
 			}
