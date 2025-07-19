@@ -10,6 +10,9 @@
 </head>
 <body>
 	<h2>Product table</h2>
+	
+	<input type="text" id="searchInput" placeholder="Search..." />
+	
 	<table>
 		<tr>
 			<th>ID</th>
@@ -46,5 +49,32 @@
     		</tr>
 		</c:if>
 	</table>
+	
+	<script>
+		function filterTable(){
+			var input = document.getElementById("searchInput");
+			var filter = input.value.toUpperCase();
+			var table = document.querySelector("table");
+			var tr = table.getElementsByTagName("tr");
+			var textValue;
+			
+			for(var i=0; i<tr.length; i++){
+				var td = tr[i].getElementsByTagName("td");
+				for(var j=0; j<td.length; j++){
+					if(td[j]){
+						textValue = td[j].textContent || td[j].innerText;
+						if(textValue.toUpperCase().indexOf(filter) > -1){
+							tr[i].style.display = "";
+							break;
+						}
+						else{
+							tr[i].style.display = "none";
+						}
+					}
+				}
+			}
+		}
+		document.getElementById("searchInput").addEventListener("input", filterTable);
+	</script>
 </body>
 </html>
