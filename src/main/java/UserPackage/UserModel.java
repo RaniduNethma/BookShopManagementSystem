@@ -7,11 +7,11 @@ public class UserModel {
 	private String lastname;
 	private String email;
 	private String birthday;
-	private int phone;
+	private String phone;
 	private String password;
 	
 	public UserModel(int id, String username, String firstname, String lastname, String email, String birthday,
-			int phone, String password) {
+			String phone, String password) {
 		super();
 		this.id = id;
 		this.username = username;
@@ -71,11 +71,11 @@ public class UserModel {
 		this.birthday = birthday;
 	}
 
-	public int getPhone() {
+	public String getPhone() {
 		return phone;
 	}
 
-	public void setPhone(int phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 

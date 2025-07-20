@@ -13,7 +13,7 @@ public class UserController {
 	private static ResultSet rs = null;
 	
 	//Insert Data
-	private static boolean insertdata(String username, String firstname, String lastname, String email, String birthday, int phone, String password){
+	public static boolean insertdata(String username, String firstname, String lastname, String email, String birthday, String phone, String password){
 		
 	boolean isSucess = false;
 	
