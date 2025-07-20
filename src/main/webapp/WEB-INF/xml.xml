@@ -5,7 +5,8 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
          http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-
+	
+	<!--Book System-->
      <servlet>
      	<servlet-name>InsertServlet</servlet-name>
      	<servlet-class>BookShopPackage.InsertServlet</servlet-class>
@@ -44,6 +45,17 @@
      <servlet-mapping>
      	<servlet-name>DeleteServlet</servlet-name>
      	<url-pattern>/DeleteServlet</url-pattern>
+     </servlet-mapping>
+     
+     <!--User System-->
+     <servlet>
+     	<servlet-name>UserInsertServlet</servlet-name>
+     	<servlet-class>UserPackage.UserInsertServlet</servlet-class>
+     </servlet>
+     
+     <servlet-mapping>
+     	<servlet-name>UserInsertServlet</servlet-name>
+     	<url-pattern>/UserInsertServlet</url-pattern>
      </servlet-mapping>
 
 </web-app>
