@@ -11,28 +11,28 @@
 		<table>
 			<tr>
 				<td>User Name</td>
-				<td><input type=text name="username" required></td>
+				<td><input type="text" name="username" required></td>
 			</tr>
 			<tr>
 				<td>First Name</td>
-				<td><input type=text name="firstname" required></td>
+				<td><input type="text" name="firstname" required></td>
 			</tr>
 			<tr>
 				<td>Last Name</td>
-				<td><input type=text name="lastname" required></td>
+				<td><input type="text" name="lastname" required></td>
 			</tr>
 			<tr>
 				<td>Email Address</td>
-				<td><input type=email name="email" required></td>
+				<td><input type="email" name="email" required></td>
 			</tr>
 			<tr>
 				<td>Birthday</td>
-				<td><input type=date name="birthday" required></td>
+				<td><input type="date" name="birthday" required></td>
 			</tr>
 			<tr>
 			<tr>
 				<td>Phone Number</td>
-				<td><input type=number name="phone" required></td>
+				<td><input type="tel" maxlength="10" name="phone" required></td>
 			</tr>
 			<tr>
 			<tr>

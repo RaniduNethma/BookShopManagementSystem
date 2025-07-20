@@ -57,5 +57,15 @@
      	<servlet-name>UserInsertServlet</servlet-name>
      	<url-pattern>/UserInsertServlet</url-pattern>
      </servlet-mapping>
+     
+     <servlet>
+     	<servlet-name>LoginServlet</servlet-name>
+     	<servlet-class>UserPackage.LoginServlet</servlet-class>
+     </servlet>
+     
+     <servlet-mapping>
+     	<servlet-name>LoginServlet</servlet-name>
+     	<url-pattern>/LoginServlet</url-pattern>
+     </servlet-mapping>
 
 </web-app>
