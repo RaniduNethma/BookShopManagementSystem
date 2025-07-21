@@ -25,8 +25,8 @@ public class LoginServlet extends HttpServlet {
 			List<UserModel> userlogin = UserController.loginValidate(username, password);
 			
 			if(userlogin != null && !userlogin.isEmpty()) {
-				String allertMessage = "Login Successful";
-				response.getWriter().println("<script>alert('"+allertMessage+"');window.location.href='profile.jsp'</script>");
+				request.getSession().setAttribute("user", userlogin.get(0));
+				response.sendRedirect("ProfileServlet");
 			}
 			else {
 				String allertMessage = "Invalid credentials, try again";
