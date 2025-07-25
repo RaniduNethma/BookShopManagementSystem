@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+.top-bar {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.profile-btn {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.profile-btn:hover {
+    background-color: #388e3c;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 20px;
+}
+
+h2 {
+    color: #02619c;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    background: #fff;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+th {
+    background-color: #0077cc;
+    color: white;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#editbutton {
+    padding: 6px 12px;
+    margin: 0 2px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#editbutton:hover {
+    background-color: #388e3c;
+}
+
+#deletebutton {
+    padding: 6px 12px;
+    margin: 0 2px;
+    background-color: #cf1f1f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+#deletebutton:hover {
+    background-color: #7d0101;
+}
+
+form {
+    display: inline;
+}

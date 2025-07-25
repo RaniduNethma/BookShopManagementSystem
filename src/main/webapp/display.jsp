@@ -5,11 +5,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Book Details</title>
+	<meta charset="UTF-8">
+	<title>Book Details</title>
+	<link rel="stylesheet" href="css/display.css" />
 </head>
 <body>
-	<h2>Product table</h2>
+	<div class="top-bar">
+    	<a href="profile.jsp"><button class="profile-btn">👤 My Profile</button></a>
+	</div>
+	
+	<h2>PRODUCT TABLE</h2>
 	
 	<input type="text" id="searchInput" placeholder="Search..." />
 	
@@ -33,12 +38,12 @@
 			<td>${book.description}</td>
 			<td>
 				<a href="update.jsp?id=${book.id}&name=${book.name}&price=${book.price}&category=${book.category}&quantity=${book.quantity}&description=${book.description}">
-					<button>Edit</button>
+					<button id=editbutton>Edit</button>
 				</a>
 				
 				<form action="DeleteServlet" method="post">
 				<input type="hidden" name="id" value="${book.id}" />
-					<button>Delete</button>
+					<button id=deletebutton onclick="return confirm('Are you sure you want to delete this book?');">Delete</button>
 				</form>
 			</td>
 		</tr>

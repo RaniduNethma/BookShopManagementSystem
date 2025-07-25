@@ -21,7 +21,5 @@ A full-featured Book Shop Management System built using **Java**, **MySQL**, **J
 | IDE          | Eclipse IDE        |
 | Config       | XML                |
 
-## 📁 Project Structure (Overview)
-
 ## License
 MIT

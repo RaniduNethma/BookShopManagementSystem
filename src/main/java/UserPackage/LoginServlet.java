@@ -26,7 +26,7 @@ public class LoginServlet extends HttpServlet {
 			
 			if(userlogin != null && !userlogin.isEmpty()) {
 				request.getSession().setAttribute("user", userlogin.get(0));
-				response.sendRedirect("ProfileServlet");
+				response.sendRedirect("GetAllServlet");
 			}
 			else {
 				String allertMessage = "Invalid credentials, try again";
