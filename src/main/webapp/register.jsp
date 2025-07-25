@@ -3,8 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>User Register</title>
+	<meta charset="UTF-8">
+	<title>User Register</title>
+	<link rel="stylesheet" href="css/register.css">
 </head>
 <body>		
 	<form action="UserInsertServlet" method="post">

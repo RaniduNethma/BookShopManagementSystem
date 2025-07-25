@@ -3,8 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Update Data</title>
+	<meta charset="UTF-8">
+	<title>Update Data</title>
+	<link rel="stylesheet" href="css/update.css">
 </head>
 <body>
 	<%

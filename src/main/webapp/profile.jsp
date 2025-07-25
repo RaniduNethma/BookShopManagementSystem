@@ -7,7 +7,7 @@
     <title>User Profile</title>
     <link rel="stylesheet" href="css/profile.css">
 </head>
-<body>
+<body>        
     <div class="profile-card">
         <h1>User Profile</h1>
 
@@ -22,14 +22,14 @@
         </table>
 
         <div class="button-group">
-            <a href="GetAllServlet"><button id=dashboardbutton>Back to Dashboard</button></a>
+            <a href="GetAllServlet"><button id="dashboardbutton">Back to Dashboard</button></a>
             <a href="updateprofile.jsp?id=${user.id}&username=${user.username}&firstname=${user.firstname}&lastname=${user.lastname}&email=${user.email}&birthday=${user.birthday}&phone=${user.phone}">
-                <button id=editbutton>Edit</button>
+                <button id="editbutton">Edit</button>
             </a>
 
             <form action="DeleteUserServlet" method="post" onsubmit="return confirm('Are you sure you want to delete your profile?');">
                 <input type="hidden" name="id" value="${user.id}" />
-                <button id=deletebutton>Delete</button>
+                <button id="deletebutton">Delete</button>
             </form>
         </div>
     </div>

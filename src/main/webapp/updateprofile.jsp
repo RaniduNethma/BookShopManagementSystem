@@ -3,8 +3,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Update Profile Details</title>
+	<meta charset="UTF-8">
+	<title>Update Profile Details</title>
+	<link rel="stylesheet" href="css/updateprofile.css">
 </head>
 <body>
 	<h1>Update Profile Details</h1>
@@ -27,27 +28,27 @@
 			</tr>
 			<tr>
 				<td>Username</td>
-				<td><input type=text name="username" value="<%=username%>" required></td>
+				<td><input type="text" name="username" value="<%=username%>" required></td>
 			</tr>
 			<tr>
 				<td>Firstname</td>
-				<td><input type=text name="firstname" value="<%=firstname%>" required></td>
+				<td><input type="text" name="firstname" value="<%=firstname%>" required></td>
 			</tr>
 			<tr>
 				<td>Lastname</td>
-				<td><input type=text name="lastname" value="<%=lastname%>" required></td>
+				<td><input type="text" name="lastname" value="<%=lastname%>" required></td>
 			</tr>
 			<tr>
 				<td>Email</td>
-				<td><input type=text name="email" value="<%=email%>" required></td>
+				<td><input type="email" name="email" value="<%=email%>" required></td>
 			</tr>
 			<tr>
 				<td>Birthday</td>
-				<td><input type=text name="birthday" value="<%=birthday%>" required></td>
+				<td><input type="date" name="birthday" value="<%=birthday%>" required></td>
 			</tr>
 			<tr>
 				<td>Phone</td>
-				<td><input type=tel maxlength="10" name="phone" value="<%=phone%>" required></td>
+				<td><input type="tel" maxlength="10" name="phone" value="<%=phone%>" required></td>
 			</tr>
 			<tr>
 				<td colspan="2"><input type="submit" value="submit"></td>
